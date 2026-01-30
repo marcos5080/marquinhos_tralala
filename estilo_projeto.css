@@ -1,0 +1,58 @@
+#caixaTopo a{
+
+    color: chartreuse;
+
+}
+
+
+#caixaHome{
+
+    background-color: indigo;
+    text-align: center;
+    color: aqua;
+
+}
+
+#tituloHome{
+
+    margin-top: 5%;
+    margin-bottom: 15%;
+
+}
+
+
+#caixaInfo{
+
+    background-color: blue;
+    text-align: center;
+    color: aqua;
+
+
+}
+
+#corpoInfo{
+
+    margin-top: 5%;
+    margin-bottom: 15%;
+
+}
+
+#caixaFim{
+
+    height: 150px;
+    width: 100%;
+    background-color: darkgoldenrod;
+
+}
+#caixaFim h5{
+
+    padding-top: 50px;
+
+}
+
+#caixaCadastro{
+
+    background-color: dodgerblue;
+    color: gold;
+
+}
