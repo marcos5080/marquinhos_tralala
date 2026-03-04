@@ -1,22 +1,23 @@
-<?php
-require "conexao.php";
-?>
+
 
 <div>
 
                    <ul class="nav justify-content-center">
                       
                         <div class="nav-item">
-                            <a class="nav-link active" href="home.php">home</a>
+                            <a class="nav-link active" href="../View/home.php">HOME</a>
                         </div>
                         <div class="nav-item">
-                            <a class="nav-link" href="cadastrar.php">Cadastro</a>
+                            <a class="nav-link" href="../View/cadastrar.php">Cadastro</a>
                         </div>
                         <div class="nav-item">
-                            <a class="nav-link" href="informacoes.php">informacoes</a>
+                            <a class="nav-link" href="../View/home2.php">Home carroa</a>
                         </div>
                         <div class="nav-item">
-                            <a class="nav-link" href="sair.php">Sair</a>
+                            <a class="nav-link" href="../View/cadastrar2.php">Carros</a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link" onclick=" return confirm('tem certeza que deseja sair?')" href="../Services/sair_action.php">Sair</a>
                         </div>
                         
                     </ul>
