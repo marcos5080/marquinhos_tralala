@@ -13,9 +13,9 @@
 <?php
 
     
-    require "../Controller/Action_SQL.php";
+    require "../Controller/Action_SQL2.php";
     require "../Conexao/Conexao.php";
-    $nova_selecao = new Action_SQL;
+    $nova_selecao = new Action_SQL2;
     $resultado = $nova_selecao->selecionar();
 
 ?>
@@ -47,9 +47,9 @@
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Nome</th>
-      <th scope="col">Descrição</th>
-      <th scope="col">Genêro</th>
-      <th scope="col">Quantidade de folhas</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Chassi</th>
+      <th scope="col">Rodas</th>
         <th scope="col">Ações</th>
 
     </tr>
@@ -59,28 +59,26 @@
     <tr>
         <td> <?=$row['id']; ?> </td>
         <td> <?=$row['nome']; ?> </td>
-        <td> <?=$row['descricao']; ?> </td>
-        <td> <?=$row['genero']; ?> </td>
-        <td> <?=$row['quant_folhas']; ?> </td>
+        <td> <?=$row['marca']; ?> </td>
+        <td> <?=$row['chassi']; ?> </td>
+        <td> <?=$row['rodas']; ?> </td>
         
          
         <td> 
-            <a class="btn btn-primary" href="editar.php?id=<?= $row['id']; ?>">Editar</a> 
-            <a class="btn btn-danger" href="../Services/deletar.php?id=<?= $row['id']; ?>" onclick="return confirm('Voce tem certeza que quer deletar?')">Deletar</a></td>   
+            <a class="btn btn-primary" href="editar2.php?id=<?= $row['id']; ?>">Editar</a> 
+            <a class="btn btn-danger" href="../Services/deletar2.php?id=<?= $row['id']; ?>" onclick="return confirm('Voce tem certeza que quer deletar?')">Deletar</a></td>   
     </tr>
     <?php endwhile; ?>
   </tbody>
 </table>
 
+</div>  
 
-
-</div>   
-    
 <?php
 
       require "../Includes/rodape.php";
 
 ?>
-
+    
 </body>
 </html>

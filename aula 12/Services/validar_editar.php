@@ -3,12 +3,13 @@
     require "../Model/Livros.php";
     require "../Controller/Action_SQL.php";
     require "../Conexao/Conexao.php";
-    
-    $novo_livro = new Livros;
-    $nova_insercao = new Action_SQL;
 
-    if(isset($_POST['enviar'])){
+    $atualizar_livro = new Livros;
+    $nova_atualizacao = new Action_SQL;
 
+    if(isset($_POST['editar'])){
+
+        $id = $_POST['id'];
         $nome = $_POST['nome'];
         $descricao = $_POST['descricao'];
         $genero = $_POST['genero'];
@@ -39,10 +40,10 @@
 
         }
 
-        $novo_livro->setNome($nome);
-        $novo_livro->setDescricao($descricao);
-        $novo_livro->setGenero($genero);
-        $novo_livro->setQuant_folhas($quant_folhas);
+        $atualizar_livro->setNome($nome);
+        $atualizar_livro->setDescricao($descricao);
+        $atualizar_livro->setGenero($genero);
+        $atualizar_livro->setQuant_folhas($quant_folhas);
 
     }
 
@@ -50,34 +51,34 @@
 
    
 
-    if($novo_livro->getNome() != "" &&
-        $novo_livro->getDescricao() != "" &&
-        $novo_livro->getGenero() != "" &&
-        $novo_livro->getQuant_folhas() != ""){
+    if($atualizar_livro->getNome() != "" &&
+       $atualizar_livro->getDescricao() != "" &&
+        $atualizar_livro->getGenero() != "" &&
+        $atualizar_livro->getQuant_folhas() != ""){
 
-        $nova_insercao->inserir(
-            $novo_livro->getNome(),
-            $novo_livro->getDescricao(),
-            $novo_livro->getGenero(),
-            $novo_livro->getQuant_folhas());
+        $nova_atualizacao->editar(
+            $id,
+            $atualizar_livro->getNome(),
+            $atualizar_livro->getDescricao(),
+            $atualizar_livro->getGenero(),
+            $atualizar_livro->getQuant_folhas());
 
         }
 ?>
-
-
 
 <?php
 
     require "../Model/Carros.php";
     require "../Controller/Action_SQL2.php";
 
-    $novo_carro = new Carros;
-    $nova_insercao2 = new Action_SQL2;
+    $atualizar_carro = new Carros;
+    $nova_atualizacao2 = new Action_SQL2;
 
-    if(isset($_POST['enviar2'])){
+    if(isset($_POST['editar2'])){
 
+        $id = $_POST['id'];
         $nome = $_POST['nome'];
-        $marca= $_POST['marca'];
+        $marca = $_POST['marca'];
         $chassi = $_POST['chassi'];
         $rodas = $_POST['rodas'];
 
@@ -89,13 +90,13 @@
         }
         if(empty(trim($marca))){
 
-            echo "<script> alert('Campo Marca em branco'); window.location.href='../View/cadastrar2.php'; </script>";
+            echo "<script> alert('Campo marca em branco'); window.location.href='../View/cadastrar2.php'; </script>";
             exit;
 
         }
         if(empty(trim($chassi))){
 
-            echo "<script> alert('Campo Chassi em branco'); window.location.href='../View/cadastrar2.php'; </script>";
+            echo "<script> alert('Campo chassi em branco'); window.location.href='../View/cadastrar2.php'; </script>";
             exit;
 
         }
@@ -106,27 +107,26 @@
 
         }
 
-        $novo_carro->setNome($nome);
-        $novo_carro->setMarca($marca);
-        $novo_carro->setChassi($chassi);
-        $novo_carro->setRodas($rodas);
+        $atualizar_carro->setNome($nome);
+        $atualizar_carro->setMarca($marca);
+        $atualizar_carro->setChassi($chassi);
+        $atualizar_carro->setRodas($rodas);
 
     }
 
-
-
    
 
-    if($novo_carro->getNome() != "" &&
-        $novo_carro->getMarca() != "" &&
-        $novo_carro->getChassi() != "" &&
-        $novo_carro->getRodas() != ""){
+    if($atualizar_carro->getNome() != "" &&
+       $atualizar_carro->getMarca() != "" &&
+        $atualizar_carro->getChassi() != "" &&
+        $atualizar_carro->getRodas() != ""){
 
-        $nova_insercao2->inserir(
-            $novo_carro->getNome(),
-            $novo_carro->getMarca(),
-            $novo_carro->getChassi(),
-            $novo_carro->getRodas());
+        $nova_atualizacao2->editar(
+            $id,
+            $atualizar_carro->getNome(),
+            $atualizar_carro->getMarca(),
+            $atualizar_carro->getChassi(),
+            $atualizar_carro->getRodas());
 
         }
 ?>

@@ -1,18 +1,16 @@
 <?php 
 
-    
-    
+   
 
-
-    class Action_SQL{
+    class Action_SQL2{
 
 
         public function selecionar(){
 
-            $nova_conexao = new Conexao;
+           $nova_conexao = new Conexao;
+            
 
-
-            $stmt = $nova_conexao->conectar_banco()->prepare("SELECT * FROM livros");
+            $stmt = $nova_conexao->conectar_banco()->prepare("SELECT * FROM carros");
             $stmt->execute();
 
             $resultado = $stmt;
@@ -30,13 +28,11 @@
 
         public function selecionar_id($id){
 
-            $nova_conexao = new Conexao;
-
-      
+              $nova_conexao = new Conexao;
 
             if(isset($id) && trim($id) && $id != NULL ){
 
-                $stmt = $nova_conexao->conectar_banco()->prepare("SELECT * FROM livros WHERE id = :id");
+                $stmt = $nova_conexao->conectar_banco()->prepare("SELECT * FROM carros WHERE id = :id");
                 $stmt->bindPARam(":id", $id);
                 $stmt->execute();
 
@@ -65,19 +61,17 @@
 
         public function inserir(
             $nome,
-            $descricao,
-            $genero,
-            $quant_folhas){
+            $marca,
+            $chassi,
+            $rodas){
 
-                    $nova_conexao = new Conexao;
+                 $nova_conexao = new Conexao;
 
-            
-
-                $stmt = $nova_conexao->conectar_banco()->prepare("INSERT INTO livros (nome, descricao, genero, quant_folhas) VALUES (:nome, :descricao, :genero, :quant_folhas)");
+                $stmt = $nova_conexao->conectar_banco()->prepare("INSERT INTO carros (nome, marca, chassi, rodas) VALUES (:nome, :marca, :chassi, :rodas)");
                 $stmt->bindParam(":nome", $nome);
-                $stmt->bindParam(":descricao", $descricao);
-                $stmt->bindParam(":genero", $genero);
-                $stmt->bindParam(":quant_folhas", $quant_folhas);
+                $stmt->bindParam(":marca", $marca);
+                $stmt->bindParam(":chassi", $chassi);
+                $stmt->bindParam(":rodas", $rodas);
                 $stmt->execute();
 
                 $resultado = $stmt;
@@ -98,19 +92,17 @@
 
             }
 
-        public function editar($id, $nome, $descricao, $genero, $quant_folhas){
+        public function editar($id, $nome, $marca, $chassi, $rodas){
 
-            
+              $nova_conexao = new Conexao;
 
              if(isset($id) && trim($id) && $id != NULL ){
 
-                 $nova_conexao = new Conexao;
-
-                $stmt = $nova_conexao->conectar_banco()->prepare("UPDATE livros SET nome = :nome, descricao = :descricao, genero = :genero, quant_folhas = :quant_folhas WHERE id = :id");
+                $stmt = $nova_conexao->conectar_banco()->prepare("UPDATE carros SET nome = :nome, marca = :marca, chassi = :chassi, rodas = :rodas WHERE id = :id");
                 $stmt->bindParam(":nome", $nome);
-                $stmt->bindParam(":descricao", $descricao);
-                $stmt->bindParam(":genero", $genero);
-                $stmt->bindParam(":quant_folhas", $quant_folhas);
+                $stmt->bindParam(":marca", $marca);
+                $stmt->bindParam(":chassi", $chassi);
+                $stmt->bindParam(":rodas", $rodas);
                 $stmt->bindParam(":id", $id);
                 $stmt->execute();
 
@@ -140,11 +132,11 @@
 
         public function deletar($id){
 
-            $nova_conexao = new Conexao;
+                  $nova_conexao = new Conexao;
 
             if(isset($id) && $id != NULL ){
 
-                $stmt = $nova_conexao->conectar_banco()->prepare("DELETE FROM livros WHERE id = :id");
+                $stmt = $nova_conexao->conectar_banco()->prepare("DELETE FROM carros WHERE id = :id");
                 $stmt->bindPARam(":id", $id);
                 $stmt->execute();
 

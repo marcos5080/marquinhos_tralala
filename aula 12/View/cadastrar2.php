@@ -36,28 +36,28 @@
 
             <div class="row" style="margin-bottom: 3%;">
                 <div class="col-md-12">
-                    <h1 style="text-align: center;">Cadastrar Livros</h1>
+                    <h1 style="text-align: center;">Cadastrar Carros</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6"> 
-                    <label>Nome do Livro:</label>
-                    <input type="text" class="form-control"  name="nome" placeholder="Nome do Livro"> 
+                    <label>Nome do Carro:</label>
+                    <input type="text" class="form-control"  name="nome" placeholder="Nome do carro"> 
                     
                 </div>
                 <div class="col-md-6">
-                    <label>Descrição:</label>
-                    <input type="text" class="form-control"  name="descricao" placeholder="Descrição do livro">
+                    <label>Marca:</label>
+                    <input type="text" class="form-control"  name="marca" placeholder="marca do carro">
                    
                 </div>
                 <div class="col-md-6">
-                    <label>Genêro:</label>
-                    <input type="text" class="form-control"  name="genero" placeholder="Genero do livro">
+                    <label>Chassi:</label>
+                    <input type="text" class="form-control"  name="chassi" placeholder="Chassi">
                    
                 </div>
                 <div class="col-md-6">
-                    <label>Quantidade de Folhas:</label>
-                    <input type="number" class="form-control"  name="quant_folhas" placeholder="Quantidade de Folhas do livro">
+                    <label>Rodas:</label>
+                    <input type="number" class="form-control"  name="rodas" placeholder="rodas">
                    
                 </div>
               
@@ -65,22 +65,22 @@
             </div>
             <div class="row" style="margin-top: 2%">
                 <div class="col-md-12">
-                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 2%;" id="btn" name="enviar">enviar</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 2%;" id="btn" name="enviar2">enviar</button>
                 </div>
             </div>
                 
             </form>
 
-            
+           
+
 
         </div>
 
-        <?php
+         <?php
 
                 require "../Includes/rodape.php";
 
         ?>
-
 
 
     
