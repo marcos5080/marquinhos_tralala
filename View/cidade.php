@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="col-md-2">
-            <button type="submit" name="nome" class="btn btn-primary">Cadastrar cidade</button>
+            <button type="submit" name="enviar" class="btn btn-primary">Cadastrar cidade</button>
             </div>
         </div>
 </form>

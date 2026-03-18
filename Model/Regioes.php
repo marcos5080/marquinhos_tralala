@@ -5,7 +5,7 @@
         private $cidade;
         private $estado;
         private $pais;
-        private $regioes;
+        
 
 
 
@@ -33,12 +33,7 @@
 
     }
 
-        public function getRegioes(){
-
-        return $this->regioes;
-         
-
-    }
+       
 
 
 
@@ -68,13 +63,7 @@
 
     }
 
-    public function setRegioes($regioes):self{
 
-        $this->regioes = $regioes;
-        return $this;
-
-
-    }
 
 
     

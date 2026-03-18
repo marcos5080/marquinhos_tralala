@@ -71,7 +71,7 @@
         
          
         <td> 
-            <a class="btn btn-primary" href="editar.php?id=<?= $row['id']; ?>">Editar</a> 
+            <a class="btn btn-primary" href="editar_PEC.php?id=<?= $row['id']; ?>&PEC_ENVIADO=estado">Editar</a> 
             <a class="btn btn-danger" href="../Services/deletar_PEC.php?id=<?= $row['id']; ?>&PEC_ENVIADO=estado" onclick="return confirm('Voce tem certeza que quer deletar?')">Deletar</a></td>   
     </tr>
     <?php endwhile; ?>
