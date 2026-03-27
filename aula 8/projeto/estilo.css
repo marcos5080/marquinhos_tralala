@@ -1,0 +1,57 @@
+#caixaHome{
+
+    background-color: chartreuse;
+    text-align: center;
+    color: blue;
+
+}
+
+#caixaTopo a{
+
+    background-color: chartreuse;
+
+}
+
+#caixaFim{
+
+    background-color: chartreuse;
+
+}
+
+
+#caixaCadastro{
+
+    background-color: chartreuse;
+    color: rgb(2, 37, 13);
+
+}
+
+#caixaSobre{
+
+    background-color: chartreuse;
+    color: darkgreen;
+
+}
+
+
+#caixaLoginBody{
+
+    background-color: chartreuse;
+    text-align: center;
+    color: darkgreen;
+
+
+}
+
+
+#espacamento{
+
+    margin-top: 3%;
+    
+
+}
+#caixaLoginBody button{
+
+    width: 100%;
+
+}

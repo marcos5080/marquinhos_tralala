@@ -24,6 +24,8 @@
                             <li><a class="dropdown-item" href="../View/estado.php">Estado</a></li>
                             <li><a class="dropdown-item" href="../View/pais.php">País</a></li>
                             <li><hr class="dropdown-divider"></li>
+                             <li><a class="dropdown-item" href="../View/regioes.php">Regiões</a></li>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="../View/enviar_email.php">Email</a></li>
                             </ul>
                         </div>
